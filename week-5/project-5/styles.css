@@ -3,9 +3,59 @@
   Chapter 2
   Programming Assignment
 
-  Author:
-  Date:
-  Filename:
+  Author: Jennifer Snyder
+  Date: 04/26/2026
+  Filename: styles.css
 */
 
-/* Add your CSS styles here */
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Blue and Purple color scheme */
+background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.form-container {
+background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent white */
+backdrop-filter: blur(12px); /* Frosted glass effect */
+padding: 40px;
+border-radius: 40px; /* Rounded corners */
+border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+
+/* Add a soft shadow for depth claymorphic effect */
+box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1), inset -6px -6px 15px rgba(255, 255, 255, 0.6), inset 6px 6px 15px rgba(0, 0, 0, 0.6);
+
+text-align: center;
+width: 300px;
+}
+
+input[type="text"], input[type="number"]{
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: none;
+border-radius: 15px;
+background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent input fields */
+box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1); /* Inset look */
+outline: none;
+}
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #6e8efb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.95);
+}
