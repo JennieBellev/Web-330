@@ -7,15 +7,22 @@ const myPlants = [
 
 // Display information on the web page using the DOM
 function displayGarden(plants) {
-    const displayArea = document.getElementById("displayArea");
-    displayArea.innerHTML = "";
+  const displayArea = document.getElementById("displayArea");
+  displayArea.innerHTML = "";
 
-    plants.forEach(plant => {
-        const card = document.createElement("div");
-        card.className = "plant-card";
-        card.innerHTML = `<h3>${plant.name}</h3><p>Type: ${plant.type}</p><p>Status: <strong>${plant.condition}</strong></p>`;
-        displayArea.appendChild(card);
-    });
+  plants.forEach(plant => {
+    const card = document.createElement("div");
+    const isWatered = plant.condition !== "Dry";
+    card.className = isWatered ? "plant-card watered-status" : "plant-card";
+
+    card.innerHTML = `
+      <h3>${plant.name}</h3>
+      <p>Type: ${plant.type}</p>
+      <p>Status: <strong>${plant.condition}</strong></p>
+    `;
+
+    displayArea.appendChild(card);
+  });
 }
 
 // Simulated Asynchronous Operation with a delay

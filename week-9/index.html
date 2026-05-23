@@ -4,74 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Virtual Plant Garden</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f7f4;
-      text-align: center;
-      margin: 0;
-      padding: 50px;
-    }
-
-    .garden-container {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      display: inline-block;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    #displayArea {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .plant-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 4px;
-      width: 180px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 10px 15px;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    button:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
-    }
-
-    #statusMsg {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+  <!-- This links your new standalone CSS file! -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <div class="garden-container">
     <h1>🪴 My Virtual Garden</h1>
-
-    <!-- The button and message tracking elements -->
     <button id="water-all-btn">Water All Plants</button>
     <p id="statusMsg">Click the button to care for the garden.</p>
-
-    <!-- Where the plant cards will safely inject -->
     <div id="displayArea"></div>
   </div>
 
